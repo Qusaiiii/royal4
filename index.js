@@ -195,7 +195,7 @@ function play(guild, song) {
 
  client.on('message', message => {
      if (message.content === prefix +"help") {
-    const embed = new Discord.RichEmbed()
+    const embed = new Util.RichEmbed()
      .setColor("RANDOM")
      .addField(`**__أوامر البوت__**`,`
      **${prefix}play**
