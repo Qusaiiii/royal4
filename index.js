@@ -38,7 +38,7 @@ client.on('message', async msg => { // eslint-disable-line
 		if (!voiceChannel) return msg.channel.send('يجب ان تتواجد في روم صوتي!');
 		const permissions = voiceChannel.permissionsFor(msg.client.user);
 		if (!permissions.has('CONNECT')) {
-			return msg.channel.send('لا املك الصلاحيات لدخول الروم';
+			return msg.channel.send('لا املك الصلاحيات لدخول الروم');
 		}
 		if (!permissions.has('SPEAK')) {
 			return msg.channel.send('لا استطيع التكلم في هذه الروم!');
