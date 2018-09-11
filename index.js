@@ -108,7 +108,7 @@ client.on('message', function(message) {
     else if (message.content.startsWith(prefix + 'vol')) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
         // console.log(args)
-        if (args > 100) return message.channel.send('1 - 100 || **__لا أكثر ولا أقل__**')
+        if (args > 200) return message.channel.send('1 - 100 || **__لا أكثر ولا أقل__**')
         if (args < 1) return message.channel.send('1 - 100 || **__لا أكثر ولا أقل__**')
         dispatcher.setVolume(1 * args / 50);
         message.channel.sendMessage(`**__ ${dispatcher.volume*50}% مستوى الصوت __**`);
