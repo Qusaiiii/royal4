@@ -1,4 +1,4 @@
-const { Client, Util } = require('discord.js');
+const { Client, Util, } = require('discord.js');
 
 const { PREFIX, GOOGLE_API_KEY } = require('./config.js');
 
@@ -207,27 +207,25 @@ function play(guild, song) {
 
      __**اوامر البوت**__
 
-     **${prefix}play**
-   امر تشغيل الأغنية , !شغل الرابط او اسم الأعنية
-     **${prefix}stop**
-        ايقاف الاغنية 
-     **${prefix}skip**     
-     امر تخطي الاغنية
-     **${prefix}queue**
-       قائمة الانتظار
-     **${prefix}np**
-        الاغنية الحالية
-     **${prefix}volume**
-    تغير مستوى الصوت 1 - 100
-     **${prefix}pause**
-      ايقاف الاغنية مؤقتا 
-     **${prefix}resume**
-       امر تكملة الاغنية
-     **${prefix}move**
-   سحب البوت او ادخال البوت الى روم
+**${prefix}play**
+امر تشغيل الأغنية , !شغل الرابط او اسم الأعنية
+**${prefix}stop**
+ايقاف الاغنية 
+**${prefix}skip**     
+امر تخطي الاغنية
+**${prefix}queue**
+قائمة الانتظار
+**${prefix}np**
+الاغنية الحالية
+**${prefix}volume**
+تغير مستوى الصوت 1 - 100
+**${prefix}pause**
+ايقاف الاغنية مؤقتا 
+**${prefix}resume**
+امر تكملة الاغنية
    
      prefix = **${prefix}**
-     ping = ${Date.now() - message.createdTimestamp}
+     ping = **${Date.now() - message.createdTimestamp}**
 
 `);
 
