@@ -193,11 +193,20 @@ function play(guild, song) {
 	serverQueue.textChannel.send(`🎶 جار بدأ: **${song.title}**`);
 }
 
- client.on('message', message => {
-     if (message.content === prefix +"help") {
-    const embed = new Util.RichEmbed()
-     .setColor("RANDOM")
-     .addField(`**__أوامر البوت__**`,`
+
+
+  client.on('message', message => {//help msg
+  if (message.author.bot) return;
+   if (message.content === prefix + "help") {
+      message.react("☑")            
+
+   
+
+
+      message.author.sendMessage(`
+
+     __**اوامر البوت**__
+
      **${prefix}play**
    امر تشغيل الأغنية , !شغل الرابط او اسم الأعنية
      **${prefix}stop**
@@ -217,13 +226,13 @@ function play(guild, song) {
      **${prefix}move**
    سحب البوت او ادخال البوت الى روم
    
-     prefix = ${prefix}
-     ping = ${Date.now() - message.createdTimestamp}`)
+     prefix = **${prefix}**
+     ping = ${Date.now() - message.createdTimestamp}
 
-      message.channel.send({embed});
-     }
-    });
-	
+`);
+
+}
+});
 
 client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
