@@ -23,7 +23,7 @@ client.on('ready', () => {
     console.log(`in ${client.guilds.size} servers `)
     console.log(`[Codes] ${client.users.size}`)
 });
-const prefix = "$"
+const prefix = "4"
 client.on('message', async msg => {
     if (msg.author.bot) return undefined;
     if (!msg.content.startsWith(prefix)) return undefined;
@@ -337,7 +337,7 @@ function play(guild, song) {
 قائمة الانتظار
 **${prefix}np**
 الاغنية الحالية
-**${prefix}volume**
+**${prefix}vol**
 تغير مستوى الصوت 1 - 100
 **${prefix}pause**
 ايقاف الاغنية مؤقتا 
